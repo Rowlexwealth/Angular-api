@@ -1,0 +1,34 @@
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>Calling an API using Angular</h1>
+    <p class="lead">
+      This example is a quick exercise to illustrate how the top-aligned navbar works.
+    </p>
+
+    <div *ngFor="let post of posts">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.body }}</p>
+      <p>{{ post.name }}</p>
+      <p>{{ post.email }}</p>
+      <hr>
+    </div>
+    <a 
+      (click)="loadPosts()"
+      class="btn btn-lg btn-primary"
+      href="javascript:void(0)" 
+      role="button">Call Now
+    </a>
+    <a 
+      (click)="createPosts()"
+      class="btn btn-lg btn-primary"
+      href="javascript:void(0)" 
+      role="button">Create Post
+    </a>
+    <a 
+      (click)="deletePosts()"
+      class="btn btn-lg btn-primary"
+      href="javascript:void(0)" 
+      role="button">Delete Post
+    </a>
+  </div>
+</main>
