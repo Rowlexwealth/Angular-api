@@ -1,4 +1,23 @@
-<main class="container">
+
+
+<nav class="toolbar" role="banner" *ngIf="isMenuVisible">
+  <div>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/contact">Contact</a>
+  </div>
+  <div>
+    <a routerLink="login">Logout</a>
+    <a routerLink="user">User</a>
+    <!-- <a routerLink="registered">Register</a> -->
+  </div>
+</nav>
+
+<app-test></app-test>
+<router-outlet></router-outlet>
+
+<!-- Api concume -->
+<!-- <main class="container">
   <div class="bg-light p-5 rounded">
     <h1>Calling an API using Angular</h1>
     <p class="lead">
@@ -20,7 +39,7 @@
     </a>
     <a 
       (click)="createPosts()"
-      class="btn btn-lg btn-primary"
+      class="btn btn-lg btn-primary ms-5"
       href="javascript:void(0)" 
       role="button">Create Post
     </a>
@@ -31,4 +50,4 @@
       role="button">Delete Post
     </a>
   </div>
-</main>
+</main> -->

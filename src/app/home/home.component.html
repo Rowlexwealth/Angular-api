@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row angular-home">
+        <h2 [ngStyle]="stylevalue">{{headername | uppercase}}</h2>
+    
+        <h2 [style.color]='colorname'> Interpolation (data binding): My salary is {{salary | currency:'INR'}}</h2>
+        <h2>Event binding:
+            <button (click)="functionclick()">Click me</button>
+        </h2><br>
+        <p>
+            Input: <input #txt (change)="functionsclick(txt.value)">
+            <button>Click me</button>
+        </p><br>
+        <h2>
+            Property binding:
+            <input [value]="isdisabled" [disabled]="isdisabled" #txt (change)="functionclicked(txt.value)">
+        </h2>
+        <h2>Two way binding:
+            <input [(ngModel)]="headername">
+        </h2>
+        <div>
+            <h1>Directives</h1>
+            <p>Directives are classes that add additional behavior to element in your Angular applications</p>
+            <ul>
+                <li>Components</li>
+                <li>Attribute Directive
+                    <ol>
+                        <li> NgClass</li>
+                        <li> NgStyle</li>
+                        <li> NgModel
+                        </li>
+                    </ol>
+                </li>
+                <li>Structural Directive
+                    <ul>
+                        <li>ngIf, ngFor, ngSwitch</li>
+                    </ul>
+                    <p *ngIf="age>0" [ngClass]="classname">ngIf: 
+                        My age is {{age | currency:'INR'}}
+                    </p>
+                    <p *ngFor="let item of colors">ngFor: {{item}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
